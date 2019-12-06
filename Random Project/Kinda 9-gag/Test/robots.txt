@@ -1,0 +1,6 @@
+#THIS IS A COMMENT
+User-agent: spambot
+Disallow: /
+
+User-agent: Googlebot
+Disallow: 

@@ -1,0 +1,185 @@
+body {
+    background: url("../images/85beae914c6e1ca93ffae71136dbb0e8.gif");
+    background-size: auto;
+    background-color: #F7F7F7;
+    padding-bottom: 2%;
+}
+
+main {
+    background-color: white;
+    margin-top: 20%;
+    padding-bottum: 5%;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    padding-bottom: 15px;
+}
+
+body > div {
+    background-color: white;
+    margin-top: 5%;
+    padding-top: 1%;
+    overflow: auto;
+}
+
+div > div > a {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+aside {
+    background: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+input[type = "text"], input[type = "password"], input[type = "email"] {
+    margin-bottom: 2px;
+}
+
+img {
+    width: 100%;
+}
+
+table {
+    width: 400px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+table, td, th {
+    border: 1px solid lightgrey;
+}
+
+.comments {
+    text-align: left;
+    background-color: #e9ecef;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.meme {
+    text-align: center;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.commentBlock {
+    width: 45%;
+    padding-top: 7%;
+}
+
+.memeBlock {
+    width: 55%;
+}
+
+.try {
+    width: 70%;
+}
+
+#users {
+    width: 500px;
+    display: inline-block;
+    float: left;
+}
+
+#issues {
+    width: 382px;
+    display: inline-block;
+}
+
+#issues li {
+    width: 340px;
+}
+
+
+/* ------------------------ */
+
+#memePage {
+    margin-left: 2%;
+}
+
+
+#chat {
+    margin-left: 2%;
+    position: fixed;
+}
+
+.error {
+    color: #FF0000;
+}
+
+.chat-connection-ack {
+    color: #007bff;
+}
+
+.chat-message {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#btnSend {
+    border:  none;
+    border-radius: 4px;
+    color: #FFF;
+    display: block;
+    margin: 15px 0px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+#chat-box {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    min-height: 300px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.chat-box-html {
+    margin: 10px 0px;
+    font-size: 0.8em;
+}
+
+.chat-box-message {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.chat-input {
+    border: 1px solid #fff;
+    border-top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 8px;
+    color: #191919;
+}
