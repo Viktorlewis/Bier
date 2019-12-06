@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contacteer ons</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <section>
+        <h1>Contacteer ons</h1>
+        <form method="POST" action="contactform.php">
+
+            <label for="opties">Soort bericht:</label>
+            <select id="opties" name="opties">
+                <option value="Vragen">Algemene vragen</option>
+                <option value="Opmerkingen">Opmerkingen</option>
+                <option value="Zakelijk">Zakelijk</option>
+            </select>
+
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam" />
+
+            <label for="email">Emailadres:</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="bericht">Bericht:</label>
+            <textarea name="bericht" id="bericht"></textarea>
+
+            <input type="submit" value="Verstuur" name="send">
+        </form>
+    </section>
+</body>
+
+</html>
