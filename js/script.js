@@ -9,7 +9,19 @@ function checkPw(){
     let pw = document.getElementById("reg-pw").value;
     let pwSecond = document.getElementById("reg-pw-second").value;
     
-    //Later nog extra controle toevoegen (apparte functie enkel op reg-pw uitvoeren) --> Grote letter, kleine letter, cijfer, teken.
+    if(pwConditionCheck(pw) === true){
+        pwRepeatCheck(pw, pwSecond);
+    } else {
+        displayMessage("Zorg ervoor dat het wachtwoord minstens\n1 kleine letter\n1 hoofdletter\n1 cijfer bevat.");
+    }
+}
+
+function pwConditionCheck(pw){
+    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    return re.test(pw);
+}
+
+function pwRepeatCheck(pw, pwSecond){
     if (pw === "" && pwSecond === ""){
         displayMessage("");
     }
