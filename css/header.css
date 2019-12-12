@@ -50,3 +50,8 @@
     border: 1px solid #ccc;
   }
 }
+
+.searchbar{
+  margin :12px;
+  float: right;
+}
