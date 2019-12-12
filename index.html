@@ -2,34 +2,74 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Titel</title>
+	<title>Bier.punt</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css"> 
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- HEADER INCLUDE -->
-    
-    <!-- BODY STARTS -->
-    <div id="login">
-        <form class="login-form" method="POST" action="php/login.php">
-            <input type="text" name="username" id="username" placeholder="username"/>
-            <input type="password" name="password" id="password" placeholder="password" />
-            <input type="submit" id="login" value="Log in"/>
-        </form>
-        <a href="#">Nog geen login?</a>
-        <!-- Hidden toevoegen aan register en achteraf vervangen als op de link geklikt wordt-->
-        <form class="register-form">
-            <input type="text" name="reg-username" id="reg-username" placeholder="username"/>
-            <input type="password" name="reg-pw" id="reg-pw" placeholder="password" />
-            <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="password opnieuw" />
-            <p id="pw-notice"></p>
-            <input type="date" id="age" name="age" />
-            <p id="age-notice"></p>
-            <button id="test">TESTEEEEEEEEEE</button>
-            <input type="checkbox" name="acceptTC" id="acceptTC" value="Ik accepteer de voorwaarden"/>
-            <input type="submit" name="register" id="register" value="Registreer mij">
 
-        </form>
-    </div>
+
+    <!-- NAVBAR & SEARCH -->
+<img class="topbanner" src="img/beers.jpg" alt="beerbanner">
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="html/ranking.html">Rankings</a>
+    <a href="html/reviews.html">Reviews</a>
+    <a href="html/profiles.html">Profiles</a>
+    <a href="html/contact.html">Contact</a>
+    <input type="text" class ="searchbar" placeholder="Search...">
+</div>
+
+
+
+
+
+
+
+    <!-- LOGIN FORM -->
+<div id="login">
+    <form class="login-form" method="POST" action="php/login.php">
+        <input type="text" name="username" id="username" placeholder="username"/>
+        <input type="password" name="password" id="password" placeholder="password" />
+        <input type="submit" id="login" value="Log in"/>
+    </form>
+    <a href="#">Nog geen login?</a>
+    <!-- Hidden toevoegen aan register en achteraf vervangen als op de link geklikt wordt-->
+    <form class="register-form">
+        <input type="text" name="reg-username" id="reg-username" placeholder="username"/>
+        <input type="password" name="reg-pw" id="reg-pw" placeholder="password" />
+        <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="password opnieuw" />
+        <p id="pw-notice"></p>
+        <input type="date" id="age" name="age" />
+        <p id="age-notice"></p>
+        <button id="test">TESTEEEEEEEEEE</button>
+        <input type="checkbox" name="acceptTC" id="acceptTC" value="Ik accepteer de voorwaarden"/>
+        <input type="submit" name="register" id="register" value="Registreer mij">
+    </form>
+</div>
 <script src="js/script.js"></script>    
-    <!-- FOOTER INCLUDE -->
+
+
+
+
+
+    <!-- FOOTER --> 
+<div class="footer">
+    <h1>BIER.PUNT - Up your social drinking game </h1>
+    <ul>
+        <li>info@bierpunt.org</li>
+        <li>credits: Andreas, Jonathan, Louis, Viktor</li>
+        <li> DRINK MET MATE - <a href="https://www.aavlaanderen.org" class="aa"> AA Vlaanderen</a></li>
+        <li><a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-twitter"></a><a href="#" class="fa fa-instagram"></a><a href="#" class="fa fa-linkedin"></a></li>
+    </ul>
+</div> 
+
+
+
+
+
 </body>
 </html>
