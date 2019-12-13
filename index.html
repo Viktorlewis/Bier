@@ -41,24 +41,27 @@
     <!-- LOGIN FORM -->
 <div id="login">
     <form id="login-form" method="POST" action="php/login.php">
-        <input type="text" name="username" id="username" placeholder="username"/>
-        <input type="password" name="password" id="password" placeholder="password" />
+        <input type="text" name="username" id="username" placeholder="username" required />
+        <input type="password" name="password" id="password" placeholder="password" required />
         <input type="submit" id="login" value="Log in"/>
+        <p id="login-notice"></p>
         <a href="#" id="noLogin">Nog geen login?</a>
     </form>
     
     <!-- Hidden toevoegen aan register en achteraf vervangen als op de link geklikt wordt-->
     <form id="register-form" class="hidden" >
-        <input type="text" name="reg-username" id="reg-username" placeholder="username"/>
-        <input type="password" name="reg-pw" id="reg-pw" placeholder="password" />
-        <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="password opnieuw" />
+        <input type="text" name="reg-username" id="reg-username" placeholder="gebruikersnaam" required/>
+        <input type="text" name="reg-name" id="reg-name" placeholder="naam" required/>
+        <input type="password" name="reg-pw" id="reg-pw" placeholder="wachtwoord" required />
+        <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="wachtwoord ter controle" required />
         <p id="pw-notice"></p>
-        <input type="date" id="age" name="age" />
+        <input type="date" id="age" name="age" required />
         <p id="age-notice"></p>
         
-        <input type="checkbox" name="acceptTC" id="acceptTC"/>
+        <input type="checkbox" name="acceptTC" id="acceptTC" required/>
         <label for="acceptTC">Ik accepteer de algemene voorwaarden</label>
         <input type="submit" name="register" id="register" value="Registreer mij">
+        <p id="register-notice"></p>
         <a href="#" id="yesLogin">Al een login?</a>
     </form>
 </div>

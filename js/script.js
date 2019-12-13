@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("age").addEventListener("input", calculateDob);
     document.getElementById("noLogin").addEventListener("click", switchFormsReg);
     document.getElementById("yesLogin").addEventListener("click", switchFormsLog);
+    document.getElementById("login").addEventListener("click", checkFormLog);
+    document.getElementById("register").addEventListener("click", checkFormReg);
 });
 
 function checkPw(){
@@ -68,6 +70,7 @@ function switchFormsLog(){
 function calculateDob(){
     let test = document.getElementById("age").value;
     getAge(test);
+    getCheckboxState("acceptTC");
 }
 
 function getAge(dateString) {
@@ -78,7 +81,6 @@ function getAge(dateString) {
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     }
-    console.log(age);
     showAgeMessage(age);
 }
 
@@ -90,4 +92,25 @@ function showAgeMessage(age){
         displayMessage("age-notice", "U bent te jong");
         disableButton("register", true);
     }
+}
+
+function checkFormLog(){
+    if(getValue("username") === "" || getValue("password") === ""){
+        displayMessage("login-notice","Gelieve alle gegevens in te vullen");
+    }
+}
+
+function checkFormReg(){
+    //reg-name, reg-username, reg-pw, reg-pw-second, age, acceptTC
+    if(getValue("reg-name") === "" || getValue("reg-username") === "" || getValue("reg-pw") === "" || getValue("reg-pw-second") === "" || getValue("age") === "" || getValue("acceptTC") === false){
+        displayMessage("register-notice", "Gelieve alle gegevens in te vullen aub.");
+    }
+}
+
+function getValue(elementId){
+    return document.getElementById(elementId).value;
+}
+
+function getCheckboxState(elementId){
+    return document.getElementById(elementId).checked;
 }
