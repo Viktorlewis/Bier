@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("reg-pw").addEventListener("input", checkPw);
     document.getElementById("reg-pw-second").addEventListener("input", checkPw);
     document.getElementById("age").addEventListener("input", calculateDob);
+    document.getElementById("noLogin").addEventListener("click", switchFormsReg);
+    document.getElementById("yesLogin").addEventListener("click", switchFormsLog);
 });
 
 function checkPw(){
@@ -38,6 +40,30 @@ function displayMessage(elementId, message){
     document.getElementById(elementId).innerHTML = message;
 }
 
+function disableButton(elementId, value){
+    document.getElementById(elementId).disabled = value;
+}
+
+function hideShowItems(elementId, showOrHide){
+    switch(showOrHide){
+        case "hide":
+            document.getElementById(elementId).classList.add("hidden");
+            break;
+        case "show":
+            document.getElementById(elementId).classList.remove("hidden");
+    }
+}
+
+function switchFormsReg(){
+    hideShowItems("login-form", "hide");
+    hideShowItems("register-form", "show");
+}
+
+function switchFormsLog(){
+    hideShowItems("login-form", "show");
+    hideShowItems("register-form", "hide");
+}
+
 
 function calculateDob(){
     let test = document.getElementById("age").value;
@@ -59,7 +85,9 @@ function getAge(dateString) {
 function showAgeMessage(age){
     if (age >= 16){
         displayMessage("age-notice", "U bent oud genoeg");
+        disableButton("register", false);
     } else {
         displayMessage("age-notice", "U bent te jong");
+        disableButton("register", true);
     }
 }

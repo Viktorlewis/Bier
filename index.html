@@ -40,27 +40,28 @@
 
     <!-- LOGIN FORM -->
 <div id="login">
-    <form class="login-form" method="POST" action="php/login.php">
+    <form id="login-form" method="POST" action="php/login.php">
         <input type="text" name="username" id="username" placeholder="username"/>
         <input type="password" name="password" id="password" placeholder="password" />
         <input type="submit" id="login" value="Log in"/>
+        <a href="#" id="noLogin">Nog geen login?</a>
     </form>
-    <a href="#">Nog geen login?</a>
+    
     <!-- Hidden toevoegen aan register en achteraf vervangen als op de link geklikt wordt-->
-    <form class="register-form">
+    <form id="register-form" class="hidden" >
         <input type="text" name="reg-username" id="reg-username" placeholder="username"/>
         <input type="password" name="reg-pw" id="reg-pw" placeholder="password" />
         <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="password opnieuw" />
         <p id="pw-notice"></p>
         <input type="date" id="age" name="age" />
         <p id="age-notice"></p>
-        <button id="test">TESTEEEEEEEEEE</button>
-        <input type="checkbox" name="acceptTC" id="acceptTC" value="Ik accepteer de voorwaarden"/>
+        
+        <input type="checkbox" name="acceptTC" id="acceptTC"/>
+        <label for="acceptTC">Ik accepteer de algemene voorwaarden</label>
         <input type="submit" name="register" id="register" value="Registreer mij">
+        <a href="#" id="yesLogin">Al een login?</a>
     </form>
 </div>
-<script src="js/script.js"></script>    
-
 
 
 <a id="myBtn" href="#top">Back to top</a>
@@ -79,6 +80,6 @@
 
 
 
-
+<script src="js/script.js"></script>    
 </body>
 </html>
