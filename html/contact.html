@@ -32,24 +32,32 @@
     </div>
   <div class="row">
     <div class="column">
-      <img src="../img/map.jpg" id="mapimg">
+      <div id="map"></div>
     </div>
     <div class="column">
-      <form action="/action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+      
+      <form method="POST" action="contactform.php">
+
+          <label for="opties">Soort bericht:</label>
+          <select id="opties" name="opties">
+              <option value="Zakelijk">Zakelijk</option>
+              <option value="Vragen">Algemene vragen</option>
+              <option value="Opmerkingen">Opmerkingen</option>
+          </select>
+
+          <label for="naam">Naam:</label>
+          <input type="text" id="naam" name="naam" />
+
+          <label for="email">Emailadres:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="bericht">Bericht:</label>
+          <textarea name="bericht" id="bericht"></textarea>
+
+          <input type="submit" value="Verstuur" name="send">
       </form>
+
+
     </div>
   </div>
 </div>
@@ -67,7 +75,16 @@
 
 
 
-
+<script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -51.0603117, lng: 3.7101227},
+        zoom: 8
+      });
+    }
+  </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP3L1PR0PGyhG3MOi86mPeT3LZrNW7KcQ&callback=initMap" async defer></script>
 </body>
 
 </html>

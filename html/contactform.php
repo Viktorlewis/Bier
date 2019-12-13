@@ -1,10 +1,12 @@
 <?php
+//bron https://www.jon-it.be
 if(isset($_POST['email'])) {
- 
+  //Email adres veranderen.
     $email_to = "jonathan@jon-it.be";
     $email_subject = "Contactformulier website";
     $email_subject_client = "Bedankt!";
     
+  
  
     function died($error) {
         echo "Sorry, het formulier lijkt niet volledig te zijn. ";
