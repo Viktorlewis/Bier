@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function checkPw(){
     let pw = document.getElementById("reg-pw").value;
     let pwSecond = document.getElementById("reg-pw-second").value;
-    
     if(pwConditionCheck(pw) === true){
         pwRepeatCheck(pw, pwSecond);
     } else {
-        displayMessage("pw-notice", "Zorg ervoor dat het wachtwoord minstens\n1 kleine letter\n1 hoofdletter\n1 cijfer bevat.");
+        displayMessage("pw-notice", "Zorg ervoor dat het wachtwoord minstens 1 kleine letter 1 hoofdletter 1 cijfer bevat.");
     }
 }
 
