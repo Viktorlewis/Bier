@@ -3,7 +3,9 @@ html{
 }
 
 body{
-	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: 'Muli', sans-serif;
+    background-color: #bfbfbd;
+    background-image: "../img/bckgr.png";
 }
 
 .topbanner{
@@ -15,3 +17,54 @@ body{
 	display: none;
 }
 
+.biervdweek{
+	align-items: center;
+	font-size: 60;
+	text-align: center;
+	width: 30%;
+	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f0f7fb;   
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #3498db;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+    margin: 2rem;
+}
+
+.topvijf{
+	font-size: 40;
+	text-align: center;
+	width: 30%;
+	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f0f7fb;   
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #3498db;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+    margin: 2rem;
+}
+
+.headline{
+	text-align: center;
+	font-style: normal;
+	font-weight: 300;
+	-webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.beerlist{
+
+}
