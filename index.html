@@ -5,25 +5,34 @@
 	<title>Bier.punt</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css"> 
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/headerAndFooter.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-
-    <!-- NAVBAR & SEARCH -->
-<img class="topbanner" src="img/beers.jpg" alt="beerbanner">
-<div class="nav">
-    <a href="index.html">Home</a>
-    <a href="html/ranking.html">Rankings</a>
-    <a href="html/reviews.html">Reviews</a>
-    <a href="html/profiles.html">Profiles</a>
-    <a href="html/contact.html">Contact</a>
-    <input type="text" class ="searchbar" placeholder="Search...">
-</div>
+<header class="main-header">
+    <div class="container">
+        <h1 class="mh-logo">
+            <img src="img/bierpunt-logo.jpg" alt="logo">
+        </h1>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rankings</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+      <ul class="socials">
+        <li><a href="#"><img src="img/email.svg" alt="e-mail"></a></li>
+        <li><a href="#"><img src="img/twitter.svg" alt="twitter"></a></li>
+        <li><a href="#"><img src="img/facebook.svg" alt="facebook"></a></li>
+        </ul>
+    </div>
+  </header>
 
 
 <a name="top"></a>
@@ -36,60 +45,42 @@
 
 <div>
     <h2 class="biervdweek">Bier van de week</h2>
+    <p class="items">Cara Pils</p>
 </div>
 
 <div>
     <h2 class="topvijf">Top 5 Bieren</h2>
+    <div class="beerlist">
     <ul>
-        <li class="beerlist">Duvel</li>
-        <li class="beerlist">Duvel</li>
-        <li class="beerlist">Duvel</li>
-        <li class="beerlist">Duvel</li>
-        <li class="beerlist">Duvel</li>
+        <li class="items">Duvel</li>
+        <li class="items">Duvel</li>
+        <li class="items">Duvel</li>
+        <li class="items">Duvel</li>
+        <li class="items">Duvel</li>
     </ul>
-</div>
-
-    <!-- LOGIN FORM -->
-<div id="login">
-    <form id="login-form" method="POST" action="php/login.php">
-        <input type="text" name="username" id="username" placeholder="username" required />
-        <input type="password" name="password" id="password" placeholder="password" required />
-        <input type="submit" id="login" value="Log in"/>
-        <p id="login-notice"></p>
-        <a href="#" id="noLogin">Nog geen login?</a>
-    </form>
-    
-    <!-- Hidden toevoegen aan register en achteraf vervangen als op de link geklikt wordt-->
-    <form id="register-form" class="hidden" >
-        <input type="text" name="reg-username" id="reg-username" placeholder="gebruikersnaam" required/>
-        <input type="text" name="reg-name" id="reg-name" placeholder="naam" required/>
-        <input type="password" name="reg-pw" id="reg-pw" placeholder="wachtwoord" required />
-        <input type="password" name="reg-pw-second" id="reg-pw-second" placeholder="wachtwoord ter controle" required />
-        <p id="pw-notice"></p>
-        <input type="date" id="age" name="age" required />
-        <p id="age-notice"></p>
-        
-        <input type="checkbox" name="acceptTC" id="acceptTC" required/>
-        <label for="acceptTC">Ik accepteer de algemene voorwaarden</label>
-        <input type="submit" name="register" id="register" value="Registreer mij">
-        <p id="register-notice"></p>
-        <a href="#" id="yesLogin">Al een login?</a>
-    </form>
 </div>
 
 
 <a id="myBtn" href="#top">Back to top</a>
 
     <!-- FOOTER --> 
-<div class="footer">
-    <h1>BIER.PUNT - Up your social drinking game </h1>
-    <ul>
-        <li>info@bierpunt.org</li>
-        <li>credits: Andreas, Jonathan, Louis, Viktor</li>
-        <li> DRINK MET MATE - <a href="https://www.aavlaanderen.org" class="aa"> AA Vlaanderen</a></li>
-        <li><a href="#" class="fa fa-facebook"></a><a href="#" class="fa fa-twitter"></a><a href="#" class="fa fa-instagram"></a><a href="#" class="fa fa-linkedin"></a></li>
-    </ul>
-</div> 
+<footer class="main-footer">
+    <div class="container">
+      <p>© 2020 bierpunt</p>
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li><a href="#">Jonathan</a></li>
+          <li><a href="#">Viktor</a></li>
+          <li><a href="#">Andreas</a></li>
+          <li><a href="#">Louis</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-socials">
+          <li><button type="button"><img src="img/like.svg" alt="like"/>Vind ik leuk</button></li>
+        <li><button type="button"><img src="img/twitter.svg" alt="twitter" />Follow @bierpunt</button></li>
+          </ul>
+        </div>
+</footer>
 
 
 
