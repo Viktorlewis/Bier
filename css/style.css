@@ -1,11 +1,17 @@
 html{
 	overflow: scroll;
+    background: url("../img/bckgr.jpg") no-repeat center center fixed;
+    
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body{
 	font-family: 'Muli', sans-serif;
-    background-color: #bfbfbd;
-    background-image: "../img/bckgr.png";
+
+    
 }
 
 .topbanner{
@@ -20,51 +26,61 @@ body{
 .biervdweek{
 	align-items: center;
 	font-size: 60;
-	text-align: center;
+	text-align: left;
+    color: white;
 	width: 30%;
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 	-moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    background-color: #f0f7fb;   
-    background-position: 9px 0px;
     background-repeat: no-repeat;
     border: solid 1px #3498db;
     border-radius: 6px;
     line-height: 18px;
     overflow: hidden;
-    padding: 15px 60px;
+    padding: 1.5rem 6rem;
     margin-left: auto;
     margin-right: auto;
+    background-image: linear-gradient(-90deg, red,orange);
+
 }
 
 .topvijf{
 	font-size: 40;
-	text-align: center;
+    font-weight: bold;
+	text-align: left;
 	width: 30%;
+    color:white;
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 	-moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    background-color: #f0f7fb;   
-    background-position: 9px 0px;
+    
     background-repeat: no-repeat;
     border: solid 1px #3498db;
     border-radius: 6px;
     line-height: 18px;
     overflow: hidden;
-    padding: 15px 60px;
+    padding: 1.5rem 6rem;
     margin: 2rem;
     margin-left: auto;
     margin-right: auto;
+    background-image: linear-gradient(-90deg, orange,red);
+
 }
 
 .headline{
 	text-align: center;
 	font-style: normal;
-	font-weight: 300;
+	font-size:8rem;
+    font-weight: bold;
+    float:right;
 	-webkit-transform: rotate(-3deg);
     -moz-transform: rotate(-3deg);
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+   padding:4rem;
+}
+
+.introtext{
+    font-size:2rem;
+   padding:5rem;
 }
 
 
@@ -113,6 +129,9 @@ font-weight: bold;
 text-align: center;
 color: white;
 background-color: black;
+background-image: linear-gradient(-90deg, orange);
+
+border-radius: 4px;
 transform: rotate(-14deg);
 -ms-transform: rotate(-14deg);
 -webkit-transform: rotate(-14deg);
@@ -122,12 +141,38 @@ content: counter(li-counter);
 counter-increment: li-counter;
 }
 
+
+.biertext{
+    text-align: center;
+
+}
 .items{
 	text-align: center;
 	font-weight: bold;
 	font-size:1.5rem;
+        background-image: linear-gradient(-90deg, red,orange);
+
 
 }
 
 
 
+
+.columnl {
+  float: right;
+  width: 40%;
+  padding:1rem;
+}
+
+.columnr {
+    float: right;
+    width: 60%;
+    padding:1rem;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

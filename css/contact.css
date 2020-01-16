@@ -12,8 +12,10 @@ input[type=text], select, textarea, input[type=email] {
   resize: vertical;
 }
 
-#map {
+.map {
   height: 100%;
+  border-radius:8px;
+  padding: 4rem;
 }
 
 input[type=submit] {
@@ -62,13 +64,17 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-#mapimg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.5rem;
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  max-height: 400px;
+.columnr{
+  
+  padding: 4rem;
+  padding-left: 8rem;
+}
+
+.central{
+  font-size:8rem;
+  font-weight: bold;
+  transform: rotate(-2deg);
+-ms-transform: rotate(-2deg);
+-webkit-transform: rotate(-2deg);
+
 }
