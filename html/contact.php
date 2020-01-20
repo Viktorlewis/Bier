@@ -1,5 +1,5 @@
 <?php
-require '../header.php';
+require '../php/header.php';
 ?> 
 <h1 class = "central">Contact us</h1>
 
@@ -37,5 +37,5 @@ require '../header.php';
 <a id="myBtn" href="#top">Back to top</a>
 
 <?php
-require '../footer.php';
+require '../php/footer.php';
 ?> 

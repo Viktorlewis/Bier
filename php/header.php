@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profiles</title>
+	<title>Bierpunt</title>
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/headerAndFooter.css"> 
@@ -17,10 +17,10 @@
             <nav class="main-nav">
                 <ul class="main-nav-list">
                     <li><a href="../index.php">Home</a></li>
-                    <li><a href="../php/ranking.php">Rankings</a></li>
-                    <li><a href="../php/reviews.php">Reviews</a></li>
-                    <li><a href="../php/profiles.php">Profile</a></li>
-                    <li><a href="../php/contact.php">Contact</a></li>
+                    <li><a href="../html/ranking.php">Rankings</a></li>
+                    <li><a href="../html/reviews.php">Reviews</a></li>
+                    <li><a href="../html/profiles.php">Profile</a></li>
+                    <li><a href="../html/contact.php">Contact</a></li>
                 </ul>
             </nav>
           <ul class="socials">

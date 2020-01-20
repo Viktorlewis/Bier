@@ -1,5 +1,5 @@
 <?php
-require "header.php";
+require "../php/header.php";
 ?>
 
 <main>
@@ -23,12 +23,17 @@ require "header.php";
             exit();
         }
     ?>
+    <p><a href="register.php">Nog geen login-gegevens?</a></p>
 
     <!-- LOGIN FORM -->
-
+        <form action="../php/login-logic.php" method="POST">
+            <input type="text" name="mailorusername" placeholer="Gebruikersnaam/E-mail">
+            <input type="password" name="password-login" placeholder="Wachtwoord">
+            <button type="submit" name="login-submit">Log in</button>
+        </form>
     <!-- END LOGIN -->
 </main>
 
 <?php
-require "footer.php";
+require "../php/footer.php";
 ?>

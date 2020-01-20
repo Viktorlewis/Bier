@@ -1,11 +1,11 @@
 <?php
 
 $servername = "localhost";
-$username = "";
+$username = "root";
 $password = "";
-$dbname = "";
+$dbname = "users";
 
-$conn = msqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(!$conn){
     die("De connectie kon niet tot stand gebracht worden: ".mysqli_connect_error());

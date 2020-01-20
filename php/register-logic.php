@@ -2,10 +2,10 @@
 if(isset($_POST['register-submit'])){
     require 'config.php';
 
-    $username = $_POST[''];
-    $email = $_POST[''];
-    $password = $_POST[''];
-    $password_repeat = $_POST[''];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password_repeat = $_POST['passwordSecond'];
 
     if(empty($username) || empty($email) || empty($password) || empty($password_repeat)){
         header("Location: ../html/register.php?error=emptyfields&uid=".$username."&mail=".$email);
@@ -28,7 +28,7 @@ if(isset($_POST['register-submit'])){
         exit();
     }
     else{
-       $sql = "SELECT uid FROM users where uid=?";
+       $sql = "SELECT username FROM Users where username=?";
        $stmt =  mysqli_stmt_init($conn);
        if(!mysqli_stmt_prepare($stmt, $sql)){
             header("Location: ../html/register.php?error=sqlerror");
@@ -43,14 +43,14 @@ if(isset($_POST['register-submit'])){
                 header("Location: ../html/register.php?error=usertaken&mail=".$mail);
                 exit();
             } else{
-                $sql = "INSERT INTO users (username, email, password) VALUES (?,?,?)";
+                $sql = "INSERT INTO Users (username, password, email) VALUES (?,?,?)";
                 $stmt =  mysqli_stmt_init($conn);
                 if(!mysqli_stmt_prepare($stmt, $sql)){
                     header("Location: ../html/register.php?error=sqlerror");
                     exit();
                } else{
                 $hashpw = $password_hash($password, PASSWORD_DEFAULT);   
-                mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashpw);
+                mysqli_stmt_bind_param($stmt, "sss", $username, $hashpw, $email);
                 mysqli_stmt_execute($stmt);
                 header("Location: ../html/register.php?register=success");
                 exit();

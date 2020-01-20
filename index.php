@@ -1,5 +1,5 @@
 <?php
-require '../header.php';
+require "php/header.php";
 ?> 
 <div class="row">
   <div class="columnl">
@@ -55,6 +55,7 @@ require '../header.php';
 
 
 <a id="myBtn" href="#top">Back to top</a>
+
 <?php
-require '../footer.php';
+require "php/footer.php";
 ?> 
