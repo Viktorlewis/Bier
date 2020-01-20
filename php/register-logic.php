@@ -1,4 +1,5 @@
 <?php
+//BRON - Jonathan - Opdrachten - Howest
 if(isset($_POST['register-submit'])){
     require 'config.php';
 
