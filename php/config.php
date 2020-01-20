@@ -1,46 +1,12 @@
 <?php
 
-class Config
-{
-    private static $configInstantie = null;
+$servername = "localhost";
+$username = "";
+$password = "";
+$dbname = "";
 
-    private $server;
-    private $database;
-    private $username;
-    private $password;
+$conn = msqli_connect($servername, $username, $password, $dbname);
 
-    private function __construct()
-    {
-        $this->server = "localhost";
-        $this->database = "dbHoneypot";
-        $this->username = "dev";
-        $this->password = "duikboottrampoline";
-    }
-
-    public static function getConfigInstantie()
-    {
-        if(is_null(self::$configInstantie))
-        {
-            self::$configInstantie = new Config();
-        }
-        return self::$configInstantie;
-    }
-
-    public function getServer()
-    {
-        return $this->server;
-    }
-    public function getDatabase()
-    {
-        return $this->database;
-    }
-    public function getUsername()
-    {
-        return $this->username;
-    }
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
+if(!$conn){
+    die("De connectie kon niet tot stand gebracht worden: ".mysqli_connect_error());
 }

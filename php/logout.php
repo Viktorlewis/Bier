@@ -1,5 +1,7 @@
 <?php
-unset($_SESSION['login']);
-$_SESSION['login'] = null;
+
+session_start();
+session_unset();
 session_destroy();
-header('Location: ../../login.php');
+
+header("Location: ../index.php");
