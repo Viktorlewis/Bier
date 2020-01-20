@@ -14,8 +14,9 @@ require "../php/header.php";
           elseif($_GET['error'] == "wrongpassword"){
             echo '<p class="signuperror">Wachtwoord/gebruikersnaam verkeerd</p>';
           }
-          
-         
+          elseif($_GET['error'] == "nouser"){
+            echo '<p class="signuperror">Deze gebruiker bestaat niet</p>';
+          }
         }
         elseif(isset($_GET['login']) == "success"){
             echo '<p class="success">Welkom!</p>';
@@ -27,7 +28,7 @@ require "../php/header.php";
 
     <!-- LOGIN FORM -->
         <form action="../php/login-logic.php" method="POST">
-            <input type="text" name="mailorusername" placeholer="Gebruikersnaam/E-mail">
+            <input type="text" name="mailorusername" placeholer="E-mail">
             <input type="password" name="password-login" placeholder="Wachtwoord">
             <button type="submit" name="login-submit">Log in</button>
         </form>

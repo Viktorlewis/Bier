@@ -1,3 +1,7 @@
+<div class="backtotop">
+  <a  href="#top">Back to top</a>
+</div>
+
 <footer class="main-footer">
     <div class="container">
       <p>© 2020 bierpunt</p>

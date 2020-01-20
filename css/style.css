@@ -1,19 +1,15 @@
 html{
-	overflow: scroll;
-    background: url("../img/bckgr.jpg") no-repeat center center fixed;
-    
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  font-size: 62.5%; /*1rem = 10px, werk aub met rem*/
 }
 
 body{
-	font-family: 'Muli', sans-serif;
-
-    
+	font-family: 'Roboto', sans-serif;
+	background-color:	#ffbc40;
 }
-
+//*===============================================================*/
+/*Geen idee wat dit is [???]*/
+/*===============================================================*/
+/*Gebruik een pagina -id!*/
 .topbanner{
 	width:100%;
 	height: 150px;
@@ -53,7 +49,7 @@ body{
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 	-moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    
+
     background-repeat: no-repeat;
     border: solid 1px #3498db;
     border-radius: 6px;
@@ -175,4 +171,158 @@ counter-increment: li-counter;
   content: "";
   display: table;
   clear: both;
+}
+/*===============================================================*/
+/*Contact-pagina [Andreas]*/
+/*===============================================================*/
+/*pagina*/
+#contact-page{
+	width:85%;
+	height:auto;
+	margin: 0% 7.5%;
+}
+/*gecentreerde titel in div*/
+#contact-page .title{
+	width:100%;
+	height:auto;
+	text-align:center;
+	background-color:#ffc940;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); /*shadow*/
+}
+
+#contact-page .title h1{
+	font-size:2rem;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	margin: 1% 0%;
+	padding:1% 0%;
+
+
+}
+/*info div*/
+#contact-page .info{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	width:50%;
+	margin: 1% 25%;
+	height:auto;
+	background-color:#ffc940;
+	padding:1%;
+	text-align:center;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+#contact-page .info  p{
+	font-size:1.6rem;
+	font-family: 'Roboto', sans-serif;
+}
+/*kaart-div*/
+#contact-page .info-map{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	width:50%;
+	margin: 1% 25%;
+	height:auto;
+	background-color:#ffc940;
+	padding:1%;
+	text-align:center;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+#contact-page .info-map iframe{
+	width:100%;
+	height:100%;
+	border-color:#ffc940;
+	border-width:0.2rem;
+}
+/*div contact-formulier*/
+#contact-page .contact-form {
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	width:100%;
+	height:auto;
+	text-align:center;
+	background-color:#ffc940;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25)
+}
+/*form-title*/
+#contact-page .contact-form h3{
+	margin:1% 40%;
+	padding:0%;
+	width:20%;
+	font-size:1.4rem;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+}
+#contact-page .contact-form fieldset{
+	border:none;
+
+}
+/*input-naam*/
+#contact-page .contact-form input#name{
+	width:15%;
+	margin:0.5% 42.5%;
+	display:inline-block;
+	border-color:#ffbc40;
+	border-width:0.2rem;
+	border-style:solid;
+}
+#contact-page .contact-form input#name::placeholder{
+	font-size:1.2rem;
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
+}
+/*input-mail*/
+#contact-page .contact-form input#mail{
+	width:15%;
+	margin:0.5% 42.5%;
+	margin-bottom:1%;
+	border-color:#ffbc40;
+	border-width:0.2rem;
+	border-style:solid;
+}
+#contact-page .contact-form input#mail::placeholder{
+	font-size:1.2rem;
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
+
+}
+/*textarea-boodschap*/
+#contact-page .contact-form textarea {
+	width:50%;
+	height:30vh;
+	border-color:#ffbc40;
+	border-width:0.2rem;
+	border-style:solid;
+	margin-bottom:1%;
+}
+#contact-page .contact-form textarea::placeholder{
+	font-size:1.2rem;
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
+	margin:0%;
+	padding:0%;
+}
+
+/*===============================================================*/
+/*algemene elementen, deze komen terug op elke pagina [Andreas]*/
+/*===============================================================*/
+/*button terug naar boven*/
+#contact-page .backtotop{
+	width:100%;
+	height:auto;
+	text-align:center;
+	padding:0%;
+	margin:1% 0%;
+
+}
+#contact-page .backtotop a{
+	text-decoration: none;
+	padding: 0% ;
+	margin: 0%;
+	font-size:1.2rem;
+	text-transform: uppercase;
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
 }

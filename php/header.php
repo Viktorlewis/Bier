@@ -26,6 +26,14 @@ session_start();
                     <li><a href="../html/contact.php">Contact</a></li>
                 </ul>
             </nav>
+            <?php
+            if(isset($_SESSION['username'])){
+                echo "<p>Welkom <a href='/html/profiles.php'>".$_SESSION['username']."</a></p>";
+                echo "<p><a href='/php/logout.php'>Log uit</a></p>";
+            }
+                
+            ?>
+            
           <ul class="socials">
             <li><a href="#"><img src="../img/email.svg" alt="e-mail"></a></li>
             <li><a href="#"><img src="../img/twitter.svg" alt="twitter"></a></li>

@@ -4,10 +4,10 @@ if(isset($_POST['login-submit'])){
     require 'config.php';
 
     $mailuid = $_POST['mailorusername'];
-    $password = $_POST['password'];
+    $password = $_POST['password-login'];
 
     if(empty($mailuid) || empty($password)){
-        header("Location: ../html/index.php?error=emptyfields");
+        header("Location: ../html/login.php?error=emptyfields");
         exit();    
     }
     else{
@@ -29,7 +29,7 @@ if(isset($_POST['login-submit'])){
                     session_start();
                     $_SESSION['userId'] = $row[id];
                     $_SESSION['username'] = $row[username];
-                    header("Location: ../html/login.php?login=success");
+                    header("Location: ../index.php?login=success");
                     exit();
                 } else {
                     header("Location: ../html/login.php?error=wrongpassword");

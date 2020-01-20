@@ -50,7 +50,7 @@ if(isset($_POST['register-submit'])){
                     header("Location: ../html/register.php?error=sqlerror");
                     exit();
                } else{
-                $hashpw = $password_hash($password, PASSWORD_DEFAULT);   
+                $hashpw = password_hash($password, PASSWORD_DEFAULT);   
                 mysqli_stmt_bind_param($stmt, "sss", $username, $hashpw, $email);
                 mysqli_stmt_execute($stmt);
                 header("Location: ../html/register.php?register=success");
