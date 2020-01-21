@@ -1,54 +1,53 @@
 <?php
 require "../php/header.php";
 ?>
-<main>
-  <div id="errors">
+<main id="register-page">
+  <div class="errors">
     <?php
         if(isset($_GET['error'])){
           if($_GET['error'] == "emptyfields"){
-            echo '<p class="signuperror">Vul alle velden in</p>';
+            echo '<p class="center-info error">Vul alle velden in</p>';
           }  
           elseif($_GET['error'] == "invalidmail"){
-            echo '<p class="signuperror">email niet geldig</p>';
+            echo '<p class="center-info error">email niet geldig</p>';
           }
           elseif($_GET['error'] == "invalidmailuid"){
-            echo '<p class="signuperror">gelieve een mailadres en gebruikersnaam in te vullen</p>';
+            echo '<p class="center-info error">gelieve een mailadres en gebruikersnaam in te vullen</p>';
           }
           elseif($_GET['error'] == "invalidusername"){
-            echo '<p class="signuperror">Gebruikersnaam niet geldig</p>';
+            echo '<p class="center-info error">Gebruikersnaam niet geldig</p>';
           }
           elseif($_GET['error'] == "sqlerror"){
-            echo '<p class="signuperror">Oeps, dit lukte niet. Probeer het later opnieuw</p>';
+            echo '<p class="center-info error">Oeps, dit lukte niet. Probeer het later opnieuw</p>';
           }
           elseif($_GET['error'] == "usertaken"){
-            echo '<p class="signuperror">Deze gebruiker bestaat al</p>';
-          }
-          elseif($_GET['error'] == "passwordcheck"){
-            echo '<p class="signuperror">Wachtwoorden komen niet overeen</p>';
-          }
-          elseif($_GET['error'] == "passwordcheck"){
-            echo '<p class="signuperror">Wachtwoorden komen niet overeen</p>';
-          }
-          elseif($_GET['error'] == "passwordcheck"){
-            echo '<p class="signuperror">Wachtwoorden komen niet overeen</p>';
+            echo '<p class="center-info error">Deze gebruiker bestaat al</p>';
           }
         }
         elseif(isset($_GET['register']) == "success"){
-            echo '<p class="success">Registratie geslaagd.</p>';
-            header("Location: login.php");
-            exit();
-           
+            echo '<p class="center-info success">Registratie geslaagd.</p>'; 
         }
     ?>
     </div>
 
     <!-- Register FORM -->
         <form action="../php/register-logic.php"  method="POST">
+        <fieldset>
+            <label for="username">Gebruikersnaam: </label>
             <input type="text" name="username" placeholder="Username">
+            </fieldset>
+            <fieldset>
+            <label for="email">Emailadres:  </label>
             <input type="email" name="email" placeholder="email">
+            </fieldset>
+            <fieldset>
+            <label for="password">Wachtwoord: </label>
             <input type="password" name="password" placeholder="password">
+            </fieldset>
+            <label for="passwordSecond">Herhaal wachtwoord: </label>
             <input type="password" name="passwordSecond"  placeholder="password sec">
-
+            </fieldset>
+            <br>
             <button type="submit" name="register-submit">Registreer</button> 
         </form>
     <!-- END REGISTER -->

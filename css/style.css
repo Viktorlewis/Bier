@@ -304,121 +304,167 @@ counter-increment: li-counter;
 	margin:0%;
 	padding:0%;
 }
-#contact-page .contact-form button{
-  width:25%;
-  height:15%;
-  margin:1% 37.5%;
-  padding:1rem;
-  text-transform:uppercase;
-  font-size:1.2rem;
-  font-family:'Roboto' , sans-serif;
-  border-radius:0.5rem;
-  background-color:#ffc966;
-  border-width:0.1rem;
-  color:#000000;
-}
-#contact-page .contact-form button:hover{
-    background-color:#ffa500;
-}
+
+/*===============================================================*/
+/*Profile-pagina [Andreas]*/
+/*===============================================================*/
+/*pagina*/
+#profiles-page{
+	width:85%;
+	  height:auto;
+	  margin: 0% 7.5%;
+  }
+  /*titel*/
+  #profiles-page h1{
+	font-size:2rem;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	margin: 1% 0%;
+	padding:1% 0%;
+	width:100%;
+	height:auto;
+	text-align:center;
+	background-color:#ffc940;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  /*tabel met inlog gegevens*/
+  #profiles-page table{
+	width:50%;
+	padding:0%;
+	height:auto;
+	margin-left: 50rem;
+  }
+  #profiles-page table tbody{
+	font-size:1.4rem;
+	font-family: 'Roboto', sans-serif;
+  }
+  #profiles-page table tbody td#left{
+	width:46.5%;
+	text-align:right;
+	padding-right:0.75%;
+  
+  }
+  #profiles-page table tbody td#right{
+	width:50%;
+	text-align:left;
+  }
+  /*input-reviews*/
+  #profiles-page input{
+	width:15%;
+	margin: 1% 42.5%;
+  }
+  
+  #profiles-page  label{
+	width:15%;
+	margin: 1% 42.5%;
+	text-align:center;
+	font-size:1.4rem;
+	font-family: 'Roboto', sans-serif;
+  }
+  #profiles-page textarea{
+	width:40%;
+	  height:20vh;
+	  border-color:#ffbc40;
+	  border-width:0.2rem;
+	  border-style:solid;
+	  margin:1% 30%;
+  
+  }
+  #profiles-page textarea::placeholder{
+	font-size:1.2rem;
+	font-family: 'Roboto', sans-serif;
+	color:#000000;
+  }
+  #profiles-page button{
+	width:20%;
+	height:15%;
+	margin:1% 40%;
+	padding:1rem;
+	text-transform:uppercase;
+	font-size:1.2rem;
+	font-family:'Roboto' , sans-serif;
+	border-radius:0.5rem;
+	background-color:#ffc966;
+	border-width:0.1rem;
+	color:#000000;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  
+  }
+  #profiles-page button:hover{
+	background-color:#ffa500;
+  }
+
 /*===============================================================*/
 /*Reviews-pagina [Jonathan]*/
 /*===============================================================*/
 #reviewpage #cafe .cafe .cafe-img img{
 	width: 20%;
 	height: 20%;
-}
+} 
+
 /*===============================================================*/
-/*Profile-pagina [Andreas]*/
+/*RANKING-pagina [Jonathan]*/
 /*===============================================================*/
-/*pagina*/
-#profiles-page{
-  width:85%;
+#ranking-page{
+	width:50%;
 	height:auto;
-	margin: 0% 7.5%;
+	margin: 0% 25%;
 }
-/*titel*/
-#profiles-page h1{
-  font-size:2rem;
-  text-transform:uppercase;
-  font-family: 'Roboto', sans-serif;
-  margin: 1% 0%;
-  padding:1% 0%;
-  width:100%;
-  height:auto;
-  text-align:center;
-  background-color:#ffc940;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-}
-/*tabel met inlog gegevens*/
-#profiles-page table{
-  width:100%;
-  padding:0%;
-  height:auto;
-}
-#profiles-page table tbody{
-  font-size:1.4rem;
-  font-family: 'Roboto', sans-serif;
-}
-#profiles-page table tbody td#left{
-  width:46.5%;
-  text-align:right;
-  padding-right:0.75%;
-
-}
-#profiles-page table tbody td#right{
-  width:50%;
-  text-align:left;
-}
-/*input-reviews*/
-#profiles-page input{
-  width:15%;
-  margin: 1% 42.5%;
+#ranking-page .bier, #ranking-page .cafe{
+	margin-top: 2rem;
 }
 
-#profiles-page  label{
-  width:15%;
-  margin: 1% 42.5%;
-  text-align:center;
-  font-size:1.4rem;
-  font-family: 'Roboto', sans-serif;
+#ranking-page .title{
+	text-align: center;
 }
-#profiles-page textarea{
-  width:40%;
-	height:20vh;
-	border-color:#ffbc40;
-	border-width:0.2rem;
-	border-style:solid;
-	margin:1% 30%;
 
+#ranking-page .cafe-img, #ranking-page .bier-img{
+	width: 50%;
+	height: 50%;
 }
-#profiles-page textarea::placeholder{
-  font-size:1.2rem;
-  font-family: 'Roboto', sans-serif;
-  color:#000000;
-}
-#profiles-page button{
-  width:20%;
-  height:15%;
-  margin:1% 40%;
-  padding:1rem;
-  text-transform:uppercase;
-  font-size:1.2rem;
-  font-family:'Roboto' , sans-serif;
-  border-radius:0.5rem;
-  background-color:#ffc966;
-  border-width:0.1rem;
-  color:#000000;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 
+#ranking-page .cafe h3, #ranking-page .bier h3{
+	font-size: 1.3rem;
 }
-#profiles-page button:hover{
-  background-color:#ffa500;
+
+/*===============================================================*/
+/*REGISTER-pagina [Jonathan]*/
+/*===============================================================*/
+
+#register-page{
+	width:65%;
+	height:auto;
+	margin: 0% 25%;
 }
+
+#register-page form{
+	margin:0% 19% ;
+}
+
+#register-page input[type=text], #register-page input[type=password], #register-page input[type=email]{
+	width: 30%;
+	height: 2.3rem;
+	margin-left: 3rem;
+	margin-top: 1.5rem;
+}
+
+#register-page button{
+	margin-top: 1.2rem;
+	margin-left: 23.6rem;
+	padding: 0.25rem;
+	border-radius: 5px;
+	width: 15%;
+}
+
+#register-page label{
+	width: 15%;
+}
+
 /*===============================================================*/
 /*algemene elementen, deze komen terug op elke pagina [Andreas]*/
 /*===============================================================*/
 /*button terug naar boven*/
- .backtotop{
+#contact-page .backtotop{
 	width:100%;
 	height:auto;
 	text-align:center;
@@ -426,7 +472,7 @@ counter-increment: li-counter;
 	margin:1% 0%;
 
 }
- .backtotop a{
+#contact-page .backtotop a{
 	text-decoration: none;
 	padding: 0% ;
 	margin: 0%;
@@ -434,4 +480,37 @@ counter-increment: li-counter;
 	text-transform: uppercase;
 	color:#000000;
 	font-family: 'Roboto', sans-serif;
+}
+
+.center-info{
+	text-align: center;
+	margin-left: 23rem;
+	border-radius: 3px;
+	width: 25%;
+	font-size: 1.3rem;
+}
+
+.error{
+	border: 3px solid red;
+}
+
+.success{
+	border: 3px solid green;
+}
+
+.headerbutton{
+	text-decoration: none;
+	border: 2px solid darkorange;
+	border-radius: 5px;
+	background-color: orange;
+	padding: 0.25rem;
+	margin-left: 1rem;
+	color: white;
+}
+
+.headerbutton:hover{
+	text-decoration: none;
+	border-radius: 2px solid orange;
+	background-color: darkorange;
+	color:white;
 }

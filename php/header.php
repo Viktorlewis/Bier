@@ -6,10 +6,12 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<title>Bierpunt</title>
-	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/headerAndFooter.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <header class="main-header">
@@ -26,18 +28,18 @@ session_start();
                     <li><a href="../pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
+            <ul class="socials">
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p>Welkom <a href='/pages/profiles.php'>".$_SESSION['username']."</a></p>";
-                echo "<p><a href='/php/logout.php'>Log uit</a></p>";
+                echo '<li>Welkom <a href="/pages/profiles.php">'.$_SESSION['username'].'</a></li>
+                <li><a  class="headerbutton" href="/php/logout.php">Log uit</a></li>';
+            } else{
+                echo '<li><a class="headerbutton" href="/pages/login.php">Login</a></li>
+                <li><a class="headerbutton" href="/pages/register.php">Registreer</a></li>';
             }
                 
             ?>
-            
-          <ul class="socials">
-            <li><a href="#"><img src="../img/email.svg" alt="e-mail"></a></li>
-            <li><a href="#"><img src="../img/twitter.svg" alt="twitter"></a></li>
-            <li><a href="#"><img src="../img/facebook.svg" alt="facebook"></a></li>
             </ul>
+         
         </div>
       </header>

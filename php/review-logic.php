@@ -4,7 +4,7 @@ if(isset($_POST['bier-review-submit'])){
 
     $name = $_POST['biernaam'];
     $alcoholperc = $_POST['alcoholPerc'];
-    $score = $_POST['score'];
+    $score = $_POST['score-b'];
     $prijs = $_POST['prijs'];
     $reviewtekst = $_POST['reviewtekst'];
 
@@ -23,7 +23,7 @@ if(isset($_POST['bier-review-submit'])){
         }
         else {
                 //KIJKEN OF AL BESTAAT EN ALTER DAN OM PRIJS EN SCORE TE WEERGEVEN
-                $reviews_dummy=3;
+                    $reviews_dummy=rand(0,15);
                     mysqli_stmt_bind_param($stmt, "sdddsi", $name, $alcoholperc,$score,$prijs,$reviewtekst, $reviews_dummy);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_store_result($stmt);
@@ -42,7 +42,7 @@ if(isset($_POST['bier-review-submit'])){
     $locatie = $_POST['cafelocatie'];
     $sanitair = $_POST['sanitair'];
     $reviewtekst = $_POST['reviewtekst'];
-
+    $score = $_POST['score-c'];
 
 
     if(empty($name) || empty($locatie) || empty($score) || empty($reviewtekst)){
@@ -57,7 +57,7 @@ if(isset($_POST['bier-review-submit'])){
         }
         else {
                 //KIJKEN OF AL BESTAAT EN ALTER DAN OM PRIJS EN SCORE TE WEERGEVEN
-                    $reviews_dummy=3;
+                    $reviews_dummy=rand(0,15);
                     mysqli_stmt_bind_param($stmt, "ssisi", $name, $locatie,$score,$reviewtekst, $reviews_dummy);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_store_result($stmt);
