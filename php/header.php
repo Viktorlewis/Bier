@@ -20,15 +20,15 @@ session_start();
             <nav class="main-nav">
                 <ul class="main-nav-list">
                     <li><a href="../index.php">Home</a></li>
-                    <li><a href="../html/ranking.php">Rankings</a></li>
-                    <li><a href="../html/reviews.php">Reviews</a></li>
-                    <li><a href="../html/profiles.php">Profile</a></li>
-                    <li><a href="../html/contact.php">Contact</a></li>
+                    <li><a href="../pages/ranking.php">Rankings</a></li>
+                    <li><a href="../pages/reviews.php">Reviews</a></li>
+                    <li><a href="../pages/profiles.php">Profile</a></li>
+                    <li><a href="../pages/contact.php">Contact</a></li>
                 </ul>
             </nav>
             <?php
             if(isset($_SESSION['username'])){
-                echo "<p>Welkom <a href='/html/profiles.php'>".$_SESSION['username']."</a></p>";
+                echo "<p>Welkom <a href='/pages/profiles.php'>".$_SESSION['username']."</a></p>";
                 echo "<p><a href='/php/logout.php'>Log uit</a></p>";
             }
                 

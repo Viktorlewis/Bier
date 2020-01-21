@@ -52,10 +52,6 @@ require "php/header.php";
 
 
 
-
-
-<a id="myBtn" href="#top">Back to top</a>
-
 <?php
 require "php/footer.php";
 ?> 

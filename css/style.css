@@ -306,6 +306,15 @@ counter-increment: li-counter;
 }
 
 /*===============================================================*/
+/*Reviews-pagina [Jonathan]*/
+/*===============================================================*/
+#reviewpage #cafe .cafe .cafe-img img{
+	width: 20%;
+	height: 20%;
+} 
+
+
+/*===============================================================*/
 /*algemene elementen, deze komen terug op elke pagina [Andreas]*/
 /*===============================================================*/
 /*button terug naar boven*/
