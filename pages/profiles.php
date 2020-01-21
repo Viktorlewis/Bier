@@ -3,9 +3,10 @@ require "../php/header.php";
 ?>
 <main id="profiles-page">
 
-<?php 
+
+<?php
     if(isset($_SESSION['username'])){
-        
+
     echo "<h1>Profielpagina van ".$_SESSION['username']."</h1>";
     require '../php/config.php';
 
@@ -24,7 +25,7 @@ require "../php/header.php";
             $personalData = array();
             while($row = mysqli_fetch_assoc($result)){
             $personalData[] = $row;
-            }   
+            }
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
@@ -36,20 +37,20 @@ require "../php/header.php";
 
 <table>
 <tr>
-<td>Gebruikersnaam: </td>
-<td><?php echo $personalData[0]['username']; ?></td>
+<td id="left">Gebruikersnaam: </td>
+<td id="right"><?php echo $personalData[0]['username']; ?></td>
 </tr>
 <tr>
-<td>Emailadres: </td>
-<td><?php echo $personalData[0]['email']; ?></td>
+<td id="left">Emailadres: </td>
+<td id="right"><?php echo $personalData[0]['email']; ?></td>
 </tr>
 </table>
 
-<?php 
+<?php
 if(isset($_GET['error'])){
     if($_GET['error'] == "emptyfields"){
       echo '<p class="signuperror">Vul alle velden in</p>';
-    }  
+    }
     elseif($_GET['error'] == "sqlerror"){
       echo '<p class="signuperror">Oeps, fout! probeer het later nogmaals</p>';
     }
@@ -62,44 +63,54 @@ if(isset($_GET['error'])){
       echo '<p class="success">Bierreview oploaden geslaagd.</p>';
     }
   }
-  
+
     echo '<div id="bier-review"><form method="POST" action="../php/review-logic.php">
       <h1>BIER REVIEW</h1>
+      <label for="biernaam">Biermerk</label>
         <input type="text" name="biernaam" placeholder="Biermerk">
+          <label for="alcoholPerc">°alc</label>
         <input type="number" name="alcoholPerc" placeholder="°alc" step=0.1>
-  
-        <!-- SLIDER SCORE --> 
+
+        <!-- SLIDER SCORE -->
+        <label for="score">Score</label>
         <input type="range" name="score" min="0" max="100" value="0">
-  
+        <label for="score">Prijs</label>
         <input type="number" name="prijs" placeholder="prijs" step=0.1 min=0>
-        <textarea name="reviewtekst" max=600></textarea>
-  
+          <label for="reviewtekst">Schrijf hier uw review.</label>
+        <textarea name="reviewtekst" max=600 placeholder="Type uw review"></textarea>
+
         <button type="submit" name="bier-review-submit">Opslaan</button>
-      
-  
-  
+
+
+
     </form></div>
     <div id="cafe-review">
     <form method="POST" action="../php/review-logic.php">
     <h1>CAFE REVIEW</h1>
+    <label for="cafenaam">Cafenaam</label>
     <input type="text" name="cafenaam" placeholder="Cafe naam">
-    <input type="text" name="cafelocatie" placeholder="adres"> 
-  
-    <!-- SLIDER SCORE --> 
+    <label for="cafelocatie">Cafe locatie</label>
+    <input type="text" name="cafelocatie" placeholder="adres">
+
+    <!-- SLIDER SCORE -->
+      <label for="score">Score</label>
     <input type="range" name="score" min="0" max="100" value="0">
-  
-  
-  
-    <textarea name="reviewtekst" max=600></textarea>
-  
+
+
+<label for="reviewtekst">Schrijf hier uw review.</label>
+    <textarea name="reviewtekst" max=600 placeholder="Type uw review"></textarea>
+
     <button type="submit" name="cafe-review-submit">Opslaan</button>
-  
-  
-  
+
+
+
   </form>
     </div>
     ';
 ?>
+
+
+
 
 </main>
 

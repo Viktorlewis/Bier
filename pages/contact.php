@@ -36,13 +36,12 @@ require '../php/header.php';
 
           <label for="name"></label>
           <textarea  placeholder="Typ uw bericht"></textarea>
+        <button type="submit">Verzenden</button>
       </fieldset>
           </form>
 </div>
 
-<div class="backtotop">
-  <a  href="#top">Back to top</a>
-</div>
+
 
 </div>
 
