@@ -2,8 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     //Toont de huidig geselecteerde score op profiles.php in de formulieren
-    document.getElementById("score-b").addEventListener("change", showSelectedScore);
-    document.getElementById("score-c").addEventListener("change", showSelectedScore);
+    document.getElementById("score-b").addEventListener("input", showSelectedScore);
+    document.getElementById("score-c").addEventListener("input", showSelectedScore);
+    document.getElementById("score-s").addEventListener("input", showSelectedScore);
+    document.getElementById("score-d").addEventListener("input", showSelectedScore);
+    document.getElementById("score-e").addEventListener("input", showSelectedScore);
 
     //gaat de forms gaan openklappen en dichtklappen
     document.getElementById("bier-header").addEventListener("click", showForm);

@@ -1,4 +1,6 @@
 <?php
+
+calcTest();
 if(isset($_POST['bier-review-submit'])){
     require 'config.php';
 
@@ -41,10 +43,14 @@ if(isset($_POST['bier-review-submit'])){
     $name = $_POST['cafenaam'];
     $locatie = $_POST['cafelocatie'];
     $reviewtekst = $_POST['reviewtekst'];
-    $score = $_POST['score-c'];
+    
+    $scorevriendelijkheid = $_POST['score-c'];
+    $scoresfeer = $_POST['score-s'];
+    $scorelocatie = $_POST['score-d'];
+    $scoreaanbod = $_POST['score-e'];
 
 
-    if(empty($name) || empty($locatie) || empty($score) || empty($reviewtekst)){
+    if(empty($name) || empty($locatie) || empty($scorevriendelijkheid) || empty($scoresfeer) || empty($scorelocatie) || empty($scoreaanbod) || empty($reviewtekst)){
         header("Location: ../pages/profiles.php?error=emptyfields");
         exit();
     } else {
@@ -57,10 +63,12 @@ if(isset($_POST['bier-review-submit'])){
         else {
                 //KIJKEN OF AL BESTAAT EN ALTER DAN OM PRIJS EN SCORE TE WEERGEVEN
                     $reviews_dummy=rand(0,15);
-                    mysqli_stmt_bind_param($stmt, "ssisi", $name, $locatie,$score,$reviewtekst, $reviews_dummy);
+                    $scoreCal = intval(($scoreaanbod + $scorelocatie + $scoresfeer + $scorevriendelijkheid)/4);
+                    mysqli_stmt_bind_param($stmt, "ssisi", $name, $locatie,$scoreCal,$reviewtekst, $reviews_dummy);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_store_result($stmt);
                     $result = mysqli_stmt_num_rows($stmt);
+                    
                     header("Location: ../pages/profiles.php?status=successcaf");
                     exit();
                 }
@@ -73,7 +81,17 @@ if(isset($_POST['bier-review-submit'])){
     header("Location: ../index.php");
     exit();
 }
+function calcTest(){
+    $test = (33+25+86+42)/4;
+    echo $test;
+}
 
+
+function calculateScore(){
+    $cal = (($scorevriendelijkheid + $scoresfeer + $scorelocatie + $scoreaanbod)/4);
+    echo intval($cal);
+    return intval($cal);
+}
 
 
 

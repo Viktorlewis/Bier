@@ -98,9 +98,19 @@ if(isset($_GET['error'])){
     <label for="cafelocatie">Waar bevind het café zich?</label>
     <input type="text" name="cafelocatie" placeholder="adres"> 
     
-    <label for="score-c">Geef een score op 100 <strong id="score-c-js"></strong></label>
+    <label for="score-c">Geef de vriendelijkheid een score op 100 <strong id="score-c-js"></strong></label>
     <input type="range" name="score-c" id="score-c" min="0" max="100" value="0">
     
+    <label for="score-s">Geef de sfeer een score op 100 <strong id="score-s-js"></strong></label>
+    <input type="range" name="score-s" id="score-s" min="0" max="100" value="0">
+
+    <label for="score-d">Geef de locatie een score op 100 <strong id="score-d-js"></strong></label>
+    <input type="range" name="score-d" id="score-d" min="0" max="100" value="0">
+
+    <label for="score-e">Geef het aanbod een score op 100 <strong id="score-e-js"></strong></label>
+    <input type="range" name="score-e" id="score-e" min="0" max="100" value="0">
+
+<p>Van al deze scores wordt een gemiddelde berekend</p>
     <label for="reviewtekst">Argumenteer uw ervaring</label>
     <textarea name="reviewtekst" max=600></textarea>
   
