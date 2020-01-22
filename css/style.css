@@ -306,7 +306,7 @@ counter-increment: li-counter;
 }
 
 /*===============================================================*/
-/*Profile-pagina [Andreas]*/
+/*Profile-pagina [Andreas & Jonathan]*/
 /*===============================================================*/
 /*pagina*/
 #profiles-page{
@@ -351,14 +351,14 @@ counter-increment: li-counter;
   /*input-reviews*/
   #profiles-page input{
 	width:15%;
-	margin: 1% 42.5%;
+	margin: 0.2% 42.5%;
   }
   
   #profiles-page  label{
 	width:15%;
-	margin: 1% 42.5%;
-	text-align:center;
-	font-size:1.4rem;
+	margin: 0% 38%;
+	text-align:left;
+	font-size:1.2rem;
 	font-family: 'Roboto', sans-serif;
   }
   #profiles-page textarea{
@@ -392,6 +392,11 @@ counter-increment: li-counter;
   }
   #profiles-page button:hover{
 	background-color:#ffa500;
+  }
+
+  #profiles-page #cafe-header-status, #profiles-page #bier-header-status{
+	  margin-left: 2rem;
+	  font-size: 1rem;
   }
 
 /*===============================================================*/
@@ -483,6 +488,7 @@ counter-increment: li-counter;
 }
 
 .center-info{
+	margin-top:1.3rem;
 	text-align: center;
 	margin-left: 23rem;
 	border-radius: 3px;

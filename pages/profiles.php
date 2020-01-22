@@ -63,15 +63,23 @@ if(isset($_GET['error'])){
     }
   }
   
-    echo '<div id="bier-review"><form method="POST" action="../php/review-logic.php">
-      <h1>BIER REVIEW</h1>
+    echo '<div id="bier-review">
+    <h1 id="bier-header">BIER REVIEW  <strong id="bier-header-status">GESLOTEN</strong></h1>
+    <form method="POST" id="bier-review-form" class="hidden" action="../php/review-logic.php">
+      
+        <label for="biernaam">Merk van het bier</label>
         <input type="text" name="biernaam" placeholder="Biermerk">
+
+        <label for="alcoholPerc">Alcoholpercentage van het bier</label>
         <input type="number" name="alcoholPerc" placeholder="°alc" step=0.1>
-  
-        <!-- SLIDER SCORE --> 
-        <input type="range" name="score-b" min="0" max="100" value="0">
-  
+
+        <label for="score-b">Geef een score op 100 <strong id="score-b-js"></strong></label>
+        <input type="range" name="score-b" id="score-b" min="0" max="100" value="0">
+
+        <label for="prijs">Wat heeft u betaald?</label>
         <input type="number" name="prijs" placeholder="prijs" step=0.1 min=0>
+
+        <label for="reviewtekst">Argumenteer uw ervaring</label>
         <textarea name="reviewtekst" max=600></textarea>
   
         <button type="submit" name="bier-review-submit">Opslaan</button>
@@ -80,16 +88,20 @@ if(isset($_GET['error'])){
   
     </form></div>
     <div id="cafe-review">
-    <form method="POST" action="../php/review-logic.php">
-    <h1>CAFE REVIEW</h1>
+    <h1 id="cafe-header">CAFE REVIEW  <strong id="cafe-header-status">GESLOTEN</strong></h1>
+    <form method="POST" id="cafe-review-form" class="hidden" action="../php/review-logic.php">
+    
+
+    <label for="cafenaam">Wat is de naam van het café?</label>
     <input type="text" name="cafenaam" placeholder="Cafe naam">
+
+    <label for="cafelocatie">Waar bevind het café zich?</label>
     <input type="text" name="cafelocatie" placeholder="adres"> 
-  
-    <!-- SLIDER SCORE --> 
-    <input type="range" name="score-c" min="0" max="100" value="0">
-  
-  
-  
+    
+    <label for="score-c">Geef een score op 100 <strong id="score-c-js"></strong></label>
+    <input type="range" name="score-c" id="score-c" min="0" max="100" value="0">
+    
+    <label for="reviewtekst">Argumenteer uw ervaring</label>
     <textarea name="reviewtekst" max=600></textarea>
   
     <button type="submit" name="cafe-review-submit">Opslaan</button>
