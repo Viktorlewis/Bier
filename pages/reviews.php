@@ -1,7 +1,7 @@
 <?php
 require "../php/header.php";
 ?>
-<main id="reviewpage">
+<main id="review-page">
 <div id="bier">
 <h1>BIER REVIEWS</h1>
 <?php
@@ -36,14 +36,14 @@ require '../php/config.php';
 }
 
 function fillCardsBeer($row) {
-  echo '<article class="beer">
-            <img class="beer-img" style="width: 10%; height: 10%" alt="'.$row['biernaam'].'" src="../img/bieren/'.$row['biernaam'].'.png" />
-            <h3>Bierreview '.$row['biernaam'].'<strong>('.$row['AlcoholPerc'].'°)</strong></h3>
+  echo '<article class="beer col">
+            <img class="beer-img" alt="'.$row['biernaam'].'" src="../img/bieren/'.$row['biernaam'].'.png" />
+            <h3 class="review-title">Bierreview '.$row['biernaam'].'<strong>('.$row['AlcoholPerc'].'°)</strong></h3>
             <aside><p class="reviewtekst">'.$row['reviewtekst'].'</p>
             <ul class="cijfers">
-            <li>Gemiddelde prijs - €'.$row['PrijsGem'].'</li>
-            <li>Algemene score - '.$row['Score'].' /100</li>
-            <li>Aantal review - '.$row['AantalReviews'].'</li>
+            <li><strong>Gemiddelde prijs - €'.$row['PrijsGem'].' </strong></li>
+            <li><strong>Algemene score - '.$row['Score'].' /100</strong></li>
+            <li><strong>Aantal review - '.$row['AantalReviews'].'</strong></li>
             </ul></aside>
         </article>';
 }
@@ -81,16 +81,16 @@ if(isset($_SESSION['username'])){
 }
 
 function fillCardsCafe($row) {
-  echo '<article class="cafe">
-            <img class="cafe-img" style="width: 20%; height: 20%" alt="'.$row['naam'].'" src="../img/cafes/temp-caf.jpg" />
-            <h3>Cafereview '.$row['naam'].'</h3>
+  echo '<article class="cafe col">
+            <img class="cafe-img" alt="'.$row['naam'].'" src="../img/cafes/temp-caf.jpg" />
+            <h3 class="review-title">Cafereview '.$row['naam'].'</h3>
             <p class="adres">'.$row['Locatie'].'</p>
             <aside><p>'.$row['reviewtekst'].'</p>
             <ul class="cijfers">
-            <li>Wifi? - '.$row['wifi'].'</li>
-            <li>Sanitair? - '.$row['sanitair'].'</li>
-            <li>Algemene score - '.$row['Score'].' /100</li>
-            <li>Aantal revieuws - '.$row['AantalReviews'].'</li>
+            <li><strong>Wifi? - '.$row['wifi'].'</strong></li>
+            <li><strong>Sanitair? - '.$row['sanitair'].'</strong></li>
+            <li><strong>Algemene score - '.$row['Score'].' /100</strong></li>
+            <li><strong>Aantal revieuws - '.$row['AantalReviews'].'</strong></li>
             </ul></aside>
         </article>';
 }

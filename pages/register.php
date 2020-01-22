@@ -1,6 +1,13 @@
 <?php
 require "../php/header.php";
 ?>
+
+<?php
+  if(isset($_SESSION['username'])){
+    header("Location: ../index.php");
+  }
+?>
+
 <main id="register-page">
   <div class="errors">
     <?php
@@ -46,9 +53,10 @@ require "../php/header.php";
             </fieldset>
             <label for="passwordSecond">Herhaal wachtwoord: </label>
             <input type="password" name="passwordSecond"  placeholder="password sec">
+            <p class="formlink"><a href="login.php">Al login gegevens?</a></p>
             </fieldset>
             <br>
-            <button type="submit" name="register-submit">Registreer</button> 
+            <button type="submit" class="headerbutton" name="register-submit">Registreer</button> 
         </form>
     <!-- END REGISTER -->
 </main>

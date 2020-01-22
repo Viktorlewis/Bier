@@ -465,6 +465,87 @@ counter-increment: li-counter;
 	width: 15%;
 }
 
+#register-page .formlink{
+	margin-left: 25rem;
+}
+
+/*===============================================================*/
+/*LOGIN-pagina [Jonathan]*/
+/*===============================================================*/
+#login-page{
+	width:65%;
+	height:auto;
+	margin: 0% 25%;
+}
+
+#login-page form{
+	margin:0% 19% ;
+}
+
+#login-page input[type=text], #login-page input[type=password], #login-page input[type=email]{
+	width: 30%;
+	height: 2.3rem;
+	margin-left: 3rem;
+	margin-top: 1.5rem;
+}
+
+#login-page button{
+	margin-top: 1.2rem;
+	margin-left: 25.6rem;
+	padding: 0.25rem;
+	border-radius: 5px;
+	width: 15%;
+}
+
+#login-page label{
+	width: 18%;
+}
+
+#login-page .formlink{
+	margin-left: 23rem;
+}
+
+/*===============================================================*/
+/*REVIEWS-pagina [Jonathan]*/
+/*===============================================================*/
+#review-page #bier, #review-page #cafe{
+	width:50%;
+	height:auto;
+	margin: 0% 28%;
+	margin-top: 5rem;
+
+}
+
+#review-page .beer, #review-page .cafe{
+	width: 25%;
+	margin-right: 2.5%;
+	display: inline-block;
+	margin-top: 1rem;
+	margin-left: 2.5%;
+	margin-bottom: 1.3rem;
+}
+
+#review-page .beer ul, #review-page .cafe ul{
+	margin-top: 1.3rem;
+	text-align: center;
+}
+
+#review-page .cafe .adres{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	color: #515257;
+}
+
+.col{
+	display: block;
+	width: 100%;
+}
+
+.review-title{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
 /*===============================================================*/
 /*algemene elementen, deze komen terug op elke pagina [Andreas]*/
 /*===============================================================*/
@@ -520,3 +601,6 @@ counter-increment: li-counter;
 	background-color: darkorange;
 	color:white;
 }
+
+
+

@@ -2,6 +2,12 @@
 require "../php/header.php";
 ?>
 
+<?php
+  if(isset($_SESSION['username'])){
+    //header("Location: ../index.php");
+  }
+?>
+
 <main id="login-page">
   <div class="errors">
     <?php
@@ -20,26 +26,26 @@ require "../php/header.php";
           }
         }
         elseif(isset($_GET['login']) == "success"){
-            echo '<p class="center-info success">Welkom!</p>';
             header("Location: ../index.php");
             exit();
         }
     ?>
-    
+    </div>
 
     <!-- LOGIN FORM -->
         <form action="../php/login-logic.php" method="POST">
         <fieldset>
-            <label for="mailorusername">Gebruikersnaam/ E-mail</label>
+            <label for="mailorusername">Gebruikersnaam/ E-mail:</label>
             <input type="text" name="mailorusername">
       </fieldset>
       <fieldset>
-          <label for="password-login">
+          <label for="password-login">Wachtwoord: </label>
             <input type="password" name="password-login">
             </fieldset>  
-            <button type="submit" name="login-submit">Log in</button>
+            <p class="formlink"><a href="register.php">Nog geen login-gegevens?</a></p>
+            <button type="submit" class="headerbutton" name="login-submit">Log in</button>
         </form>
-        <p><a href="register.php">Nog geen login-gegevens?</a></p>
+        
     <!-- END LOGIN -->
 </main>
 
