@@ -36,16 +36,16 @@ require '../php/config.php';
 }
 
 function fillCardsBeer($row) {
-  echo '<div class="beer">
+  echo '<article class="beer">
             <img class="beer-img" style="width: 10%; height: 10%" alt="'.$row['biernaam'].'" src="../img/bieren/'.$row['biernaam'].'.png" />
             <h3>Bierreview '.$row['biernaam'].'<strong>('.$row['AlcoholPerc'].'°)</strong></h3>
-            <p class="reviewtekst">'.$row['reviewtekst'].'</p>
+            <aside><p class="reviewtekst">'.$row['reviewtekst'].'</p>
             <ul class="cijfers">
             <li>Gemiddelde prijs - €'.$row['PrijsGem'].'</li>
             <li>Algemene score - '.$row['Score'].' /100</li>
             <li>Aantal review - '.$row['AantalReviews'].'</li>
-            </ul>
-        </div>';
+            </ul></aside>
+        </article>';
 }
 ?>
 </div>
@@ -81,18 +81,18 @@ if(isset($_SESSION['username'])){
 }
 
 function fillCardsCafe($row) {
-  echo '<div class="cafe">
+  echo '<article class="cafe">
             <img class="cafe-img" style="width: 20%; height: 20%" alt="'.$row['naam'].'" src="../img/cafes/temp-caf.jpg" />
             <h3>Cafereview '.$row['naam'].'</h3>
             <p class="adres">'.$row['Locatie'].'</p>
-            <p>'.$row['reviewtekst'].'</p>
+            <aside><p>'.$row['reviewtekst'].'</p>
             <ul class="cijfers">
             <li>Wifi? - '.$row['wifi'].'</li>
             <li>Sanitair? - '.$row['sanitair'].'</li>
             <li>Algemene score - '.$row['Score'].' /100</li>
             <li>Aantal revieuws - '.$row['AantalReviews'].'</li>
-            </ul>
-        </div>';
+            </ul></aside>
+        </article>';
 }
 ?>
 </div>

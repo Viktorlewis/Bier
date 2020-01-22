@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("score-b").addEventListener("change", showSelectedScore);
     document.getElementById("score-c").addEventListener("change", showSelectedScore);
 
-    //gaat de forms gaan openklappen
+    //gaat de forms gaan openklappen en dichtklappen
     document.getElementById("bier-header").addEventListener("click", showForm);
     document.getElementById("cafe-header").addEventListener("click", showForm);
-
 });
 
 
