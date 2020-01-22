@@ -40,10 +40,6 @@ require '../php/header.php';
           </form>
 </div>
 
-<div class="backtotop">
-  <a  href="#top">Back to top</a>
-</div>
-
 </div>
 
 

@@ -6,7 +6,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	background-color:	#ffbc40;
 }
-//*===============================================================*/
+/*===============================================================*/
 /*Geen idee wat dit is [???]*/
 /*===============================================================*/
 /*Gebruik een pagina -id!*/
@@ -24,7 +24,7 @@ body{
 	font-size: 60;
 	text-align: left;
     color: white;
-	width: 30%;
+	width: 30em;
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 	-moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -44,7 +44,7 @@ body{
 	font-size: 40;
     font-weight: bold;
 	text-align: left;
-	width: 30%;
+	width: 30em;
     color:white;
 	box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 	-moz-border-radius: 6px;
@@ -69,84 +69,84 @@ body{
 	font-size:8rem;
     font-weight: bold;
     float:right;
-	-webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
    padding:4rem;
 }
 
 .introtext{
-    font-size:2rem;
-   padding:5rem;
+	font-size:2rem;
+	padding:5rem;
+	max-width: 75rem;
 }
 
 
 .beerlist{
-width:410px;
-margin:0 auto;
+	width:410px;
+	margin:0 auto;
 }
 .beerlist ul {
-list-style-type: none;
-list-style-type: decimal !ie; /*IE 7- hack*/
-margin: 0;
-margin-left: 1em;
-padding: 0;
-counter-reset: li-counter;
+	list-style-type: none;
+	list-style-type: decimal; /*IE 7- hack*/
+	margin: 0;
+	margin-left: 1em;
+	padding: 0;
+	counter-reset: li-counter;
 }
 .beerlist ul li{
-position: relative;
-margin-bottom: 1.5em;
-padding: 0.5em;
-background-color: #F0D756;
-padding-left: 58px;
+	position: relative;
+	margin-bottom: 1.5em;
+	padding: 0.5em;
+	background-color: #F0D756;
+	padding-left: 58px;
 }
 
 .beerlist a{
-text-decoration:none;
-color:black;
-font-size:15px;
-font-family: 'Raleway', sans-serif;
+	text-decoration:none;
+	color:black;
+	font-size:15px;
+	font-family: 'Raleway', sans-serif;
 }
 
 .beerlist li:hover{
-box-shadow:inset -1em 0 #6CD6CC;
--webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
-transition: box-shadow 0.5s;
+	box-shadow:inset -1em 0 #6CD6CC;
+	-webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
+	transition: box-shadow 0.5s;
 }
 
 .beerlist ul li:before {
-position: absolute;
-top: -0.3em;
-left: -0.5em;
-width: 1.8em;
-height: 1.2em;
-font-size: 2em;
-line-height: 1.2;
-font-weight: bold;
-text-align: center;
-color: white;
-background-color: black;
-background-image: linear-gradient(-90deg, orange);
+	position: absolute;
+	top: -0.3em;
+	left: -0.5em;
+	width: 1.8em;
+	height: 1.2em;
+	font-size: 2em;
+	line-height: 1.2;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	background-color: black;
+	background-image: linear-gradient(-90deg, orange);
 
-border-radius: 4px;
-transform: rotate(-14deg);
--ms-transform: rotate(-14deg);
--webkit-transform: rotate(-14deg);
-z-index: 99;
-overflow: hidden;
-content: counter(li-counter);
-counter-increment: li-counter;
+	border-radius: 4px;
+	transform: rotate(-14deg);
+	-ms-transform: rotate(-14deg);
+	-webkit-transform: rotate(-14deg);
+	z-index: 99;
+	overflow: hidden;
+	content: counter(li-counter);
+	counter-increment: li-counter;
 }
 
 
 .biertext{
     text-align: center;
-
+	font-size: 2em;
+	padding: 1rem;
 }
 .items{
 	text-align: center;
 	font-weight: bold;
 	font-size:1.5rem;
-        background-image: linear-gradient(-90deg, red,orange);
+    background-image: linear-gradient(-90deg, red,orange);
 
 
 }
@@ -155,9 +155,9 @@ counter-increment: li-counter;
 
 
 .columnl {
-  float: right;
-  width: 40%;
-  padding:1rem;
+	float: right;
+	width: 40%;
+	padding:1rem;
 }
 
 .columnr {
@@ -168,9 +168,9 @@ counter-increment: li-counter;
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 /*===============================================================*/
 /*Contact-pagina [Andreas]*/
@@ -311,8 +311,8 @@ counter-increment: li-counter;
 /*pagina*/
 #profiles-page{
 	width:85%;
-	  height:auto;
-	  margin: 0% 7.5%;
+	height:auto;
+	margin: 0% 7.5%;
   }
   /*titel*/
   #profiles-page h1{
@@ -395,8 +395,8 @@ counter-increment: li-counter;
   }
 
   #profiles-page #cafe-header-status, #profiles-page #bier-header-status{
-	  margin-left: 2rem;
-	  font-size: 1rem;
+	margin-left: 2rem;
+	font-size: 1rem;
   }
 
 /*===============================================================*/
@@ -550,7 +550,7 @@ counter-increment: li-counter;
 /*algemene elementen, deze komen terug op elke pagina [Andreas]*/
 /*===============================================================*/
 /*button terug naar boven*/
-#contact-page .backtotop{
+.backtotop{
 	width:100%;
 	height:auto;
 	text-align:center;
@@ -558,7 +558,7 @@ counter-increment: li-counter;
 	margin:1% 0%;
 
 }
-#contact-page .backtotop a{
+.backtotop a{
 	text-decoration: none;
 	padding: 0% ;
 	margin: 0%;
@@ -602,5 +602,7 @@ counter-increment: li-counter;
 	color:white;
 }
 
-
+.rotated {
+	transform: rotate(-10deg);
+}
 
