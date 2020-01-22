@@ -40,7 +40,6 @@ if(isset($_POST['bier-review-submit'])){
     require 'config.php';
     $name = $_POST['cafenaam'];
     $locatie = $_POST['cafelocatie'];
-    $sanitair = $_POST['sanitair'];
     $reviewtekst = $_POST['reviewtekst'];
     $score = $_POST['score-c'];
 
@@ -49,7 +48,7 @@ if(isset($_POST['bier-review-submit'])){
         header("Location: ../pages/profiles.php?error=emptyfields");
         exit();
     } else {
-        $sql = "INSERT INTO users.cafes(naam, Locatie, Score, reviewtekst, AantalReviews) VALUES(?,?,?,?,?)";
+        $sql = "INSERT INTO cafes(naam, Locatie, Score, reviewtekst, AantalReviews) VALUES(?,?,?,?,?)";
         $stmt =  mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
              header("Location: ../pages/profiles.php?error=sqlerror");
@@ -62,7 +61,6 @@ if(isset($_POST['bier-review-submit'])){
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_store_result($stmt);
                     $result = mysqli_stmt_num_rows($stmt);
-
                     header("Location: ../pages/profiles.php?status=successcaf");
                     exit();
                 }
